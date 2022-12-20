@@ -7,10 +7,10 @@ Validation Result (EPE) after 25000 steps:
 
 Dataset Folder:
 The dataset folder should contain Sintel dataset in the following schema:
-├── datasets
+<p>├── datasets
     ├── Sintel
         ├── training
         ├── test
-
+</p>
 Sintel dataset download link: wget http://files.is.tue.mpg.de/sintel/MPI-Sintel-complete.zip
    
