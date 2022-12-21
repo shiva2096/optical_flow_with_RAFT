@@ -188,12 +188,11 @@ def train(args):
 
                 results = {}
                 for val_dataset in args.validation:
-                    if val_dataset == 'chairs':
-                        results.update(evaluate.validate_chairs(model.module))
-                    elif val_dataset == 'sintel':
+                    if val_dataset == 'sintel':
                         results.update(evaluate.validate_sintel(model.module))
-                    elif val_dataset == 'kitti':
-                        results.update(evaluate.validate_kitti(model.module))
+                    else:
+                        print("Please enter sintel for validation.")
+                        exit()
 
                 logger.write_dict(results)
                 
