@@ -71,9 +71,9 @@ By default `datasets.py` will search for the datasets in these locations. You ca
 
 ## Evaluation
 ---
-You can evaluate a trained model using `evaluate.py`
+Our trained model can be evaluated using `evaluate.py`
 ```Shell
-python3 evaluate.py --model=models/raft-things.pth --dataset=sintel --mixed_precision
+python3 evaluate.py --model=checkpoints/model-name.pth --dataset=sintel --mixed_precision
 ```
 
 ## Training
