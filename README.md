@@ -46,7 +46,7 @@ conda install pytorch=1.6.0 torchvision=0.7.0 cudatoolkit=10.1 matplotlib tensor
 ---
 We have stored our model under checkpoints and it can be used for demo using:
 ```Shell
-python3 demo.py --model=checkpoints/model-name --path=path-for-evaluation-dataset
+python3 demo.py --model=checkpoints/model-name --path=path-for-evaluation-dataset --mixed_precision
 ```
 
 ## Required Data
