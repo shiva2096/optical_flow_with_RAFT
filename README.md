@@ -59,8 +59,7 @@ Or use this Sintel dataset download link:
 ```
 wget http://files.is.tue.mpg.de/sintel/MPI-Sintel-complete.zip
 ```
-
-By default `datasets.py` will search for the datasets in these locations. You can create symbolic links to wherever the datasets were downloaded in the `datasets` folder
+If trainining, maintain the directory structure for dataset as the following:
 
 ```Shell
 ├── datasets
