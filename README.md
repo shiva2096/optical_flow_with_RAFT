@@ -44,15 +44,9 @@ conda install pytorch=1.6.0 torchvision=0.7.0 cudatoolkit=10.1 matplotlib tensor
 
 ## Demos
 ---
-Pretrained models can be downloaded by running
+We have stored our model under checkpoints and it can be used for demo using:
 ```Shell
-./download_models.sh
-```
-or downloaded from [google drive](https://drive.google.com/drive/folders/1sWDsfuZ3Up38EUQt7-JDTT1HcGHuJgvT?usp=sharing)
-
-You can demo a trained model on a sequence of frames
-```Shell
-python demo.py --model=models/raft-things.pth --path=demo-frames
+python3 demo.py --model=checkpoints/model-name --path=path-for-evaluation-dataset
 ```
 
 ## Required Data
@@ -79,17 +73,11 @@ By default `datasets.py` will search for the datasets in these locations. You ca
 ---
 You can evaluate a trained model using `evaluate.py`
 ```Shell
-python evaluate.py --model=models/raft-things.pth --dataset=sintel --mixed_precision
+python3 evaluate.py --model=models/raft-things.pth --dataset=sintel --mixed_precision
 ```
 
 ## Training
----
-We used the following training schedule 1 GPU. Training logs will be written to the `runs` which can be visualized using tensorboard
+We trained our model on RTX GPU using:
 ```Shell
-./train_standard.sh
-```
-
-If you have a RTX GPU, training can be accelerated using mixed precision. You can expect similiar results in this setting (1 GPU)
-```Shell
-./train_mixed.sh
+python3 -u train.py --name raft-sintel --stage sintel --validation sintel --gpus 0 --num_steps 25000 --batch_size 5 --lr 0.0001 --image_size 368 768 --wdecay 0.00001 --gamma=0.85 --mixed_precision
 ```
