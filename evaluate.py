@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 import datasets
 # from utils import flow_viz
-from utils.utils import  writeFlow, writeFlowKITTI
+from utils.utils import  writeFlow
 from utils.utils import InputPadder, forward_interpolate
 
 from raft import RAFT
